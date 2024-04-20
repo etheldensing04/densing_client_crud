@@ -42,26 +42,26 @@ namespace densing_client_crud.Entities
             // 
             // addbutton
             // 
-            this.addbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.addbutton.Location = new System.Drawing.Point(129, 264);
+            this.addbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.addbutton.Location = new System.Drawing.Point(153, 158);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(75, 34);
             this.addbutton.TabIndex = 17;
-            this.addbutton.Text = "Add";
+            this.addbutton.Text = "Update";
             this.addbutton.UseVisualStyleBackColor = false;
             this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
             // 
             // date_val
             // 
-            this.date_val.Location = new System.Drawing.Point(108, 215);
+            this.date_val.Location = new System.Drawing.Point(113, 118);
             this.date_val.Name = "date_val";
-            this.date_val.Size = new System.Drawing.Size(200, 20);
+            this.date_val.Size = new System.Drawing.Size(197, 20);
             this.date_val.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 214);
+            this.label4.Location = new System.Drawing.Point(19, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 30);
             this.label4.TabIndex = 15;
@@ -69,7 +69,7 @@ namespace densing_client_crud.Entities
             // 
             // rname_val
             // 
-            this.rname_val.Location = new System.Drawing.Point(108, 153);
+            this.rname_val.Location = new System.Drawing.Point(113, 89);
             this.rname_val.Name = "rname_val";
             this.rname_val.Size = new System.Drawing.Size(195, 20);
             this.rname_val.TabIndex = 14;
@@ -77,7 +77,7 @@ namespace densing_client_crud.Entities
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 149);
+            this.label3.Location = new System.Drawing.Point(19, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 30);
             this.label3.TabIndex = 13;
@@ -85,7 +85,7 @@ namespace densing_client_crud.Entities
             // 
             // lname_val
             // 
-            this.lname_val.Location = new System.Drawing.Point(108, 82);
+            this.lname_val.Location = new System.Drawing.Point(113, 53);
             this.lname_val.Name = "lname_val";
             this.lname_val.Size = new System.Drawing.Size(195, 20);
             this.lname_val.TabIndex = 12;
@@ -93,7 +93,7 @@ namespace densing_client_crud.Entities
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 78);
+            this.label2.Location = new System.Drawing.Point(19, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 30);
             this.label2.TabIndex = 11;
@@ -101,7 +101,7 @@ namespace densing_client_crud.Entities
             // 
             // fname_val
             // 
-            this.fname_val.Location = new System.Drawing.Point(108, 22);
+            this.fname_val.Location = new System.Drawing.Point(113, 17);
             this.fname_val.Name = "fname_val";
             this.fname_val.Size = new System.Drawing.Size(195, 20);
             this.fname_val.TabIndex = 10;
@@ -109,7 +109,7 @@ namespace densing_client_crud.Entities
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 18);
+            this.label1.Location = new System.Drawing.Point(19, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 30);
             this.label1.TabIndex = 9;
@@ -119,7 +119,7 @@ namespace densing_client_crud.Entities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 309);
+            this.ClientSize = new System.Drawing.Size(322, 204);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.date_val);
             this.Controls.Add(this.label4);

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace complete_csharp_crud
 {
@@ -39,17 +38,16 @@ namespace complete_csharp_crud
             string fname = _addClient.GetAddText[0];
             string lname = _addClient.GetAddText[1];
             string residency = _addClient.GetAddText[2];
-            DateTime date = _addClient.dateValue;
+            DateTime date = _addClient.dateValue;                 
 
+            Client add_client = new Client();
 
-            Client addClient = new Client();
+            add_client.Firstname = fname;
+            add_client.Lastname = lname;
+            add_client.Residency = residency;
+            add_client.Birthday = date;
 
-            addClient.Firstname = fname;
-            addClient.Lastname = lname;
-            addClient.Residency = residency;
-            addClient.Birthday = date;
-
-            _context.Clients.Add(addClient);
+            _context.Clients.Add(add_client);
             _context.SaveChanges();
 
             _bindingSource.DataSource = _context.Clients.ToList();
@@ -85,6 +83,35 @@ namespace complete_csharp_crud
             _context.SaveChanges();
 
             _bindingSource.DataSource = _context.Clients.ToList();
+        }
+
+        public void searchClient(string text)
+        {
+            try
+            {
+                int id;
+                bool isId = int.TryParse(text, out id);
+
+                var result = _context.Clients
+                    .Where(c => (isId && c.Id == id) ||
+                                c.Firstname.Contains(text) ||
+                                c.Lastname.Contains(text) ||
+                                c.Residency.Contains(text))
+                    .Select(c => new
+                    {
+                        c.Id,
+                        c.Firstname,
+                        c.Lastname,
+                        c.Residency,
+                        c.Birthday
+                    })
+                    .ToList();
+
+                _bindingSource.DataSource = result;
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

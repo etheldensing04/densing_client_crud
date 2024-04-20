@@ -34,6 +34,8 @@ namespace densing_client_crud
             this.addbutton = new System.Windows.Forms.Button();
             this.updatebutton = new System.Windows.Forms.Button();
             this.deletebutton = new System.Windows.Forms.Button();
+            this.searchbar = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,20 +59,20 @@ namespace densing_client_crud
             this.residencyDataGridViewTextBoxColumn,
             this.birthdayDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.clientBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 83);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(542, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(542, 339);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // addbutton
             // 
             this.addbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.addbutton.Location = new System.Drawing.Point(560, 83);
+            this.addbutton.Location = new System.Drawing.Point(317, 32);
             this.addbutton.Name = "addbutton";
-            this.addbutton.Size = new System.Drawing.Size(75, 34);
+            this.addbutton.Size = new System.Drawing.Size(75, 40);
             this.addbutton.TabIndex = 1;
             this.addbutton.Text = "Add";
             this.addbutton.UseVisualStyleBackColor = false;
@@ -79,7 +81,7 @@ namespace densing_client_crud
             // updatebutton
             // 
             this.updatebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.updatebutton.Location = new System.Drawing.Point(560, 211);
+            this.updatebutton.Location = new System.Drawing.Point(398, 32);
             this.updatebutton.Name = "updatebutton";
             this.updatebutton.Size = new System.Drawing.Size(75, 40);
             this.updatebutton.TabIndex = 2;
@@ -90,13 +92,32 @@ namespace densing_client_crud
             // deletebutton
             // 
             this.deletebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.deletebutton.Location = new System.Drawing.Point(560, 362);
+            this.deletebutton.Location = new System.Drawing.Point(479, 32);
             this.deletebutton.Name = "deletebutton";
-            this.deletebutton.Size = new System.Drawing.Size(75, 34);
+            this.deletebutton.Size = new System.Drawing.Size(75, 40);
             this.deletebutton.TabIndex = 3;
             this.deletebutton.Text = "Delete";
             this.deletebutton.UseVisualStyleBackColor = false;
             this.deletebutton.Click += new System.EventHandler(this.deletebutton_Click);
+            // 
+            // searchbar
+            // 
+            this.searchbar.Location = new System.Drawing.Point(12, 46);
+            this.searchbar.Name = "searchbar";
+            this.searchbar.Size = new System.Drawing.Size(299, 20);
+            this.searchbar.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.Font = new System.Drawing.Font("Calisto MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(41, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "SEARCH";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -141,7 +162,9 @@ namespace densing_client_crud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 450);
+            this.ClientSize = new System.Drawing.Size(566, 427);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.searchbar);
             this.Controls.Add(this.deletebutton);
             this.Controls.Add(this.updatebutton);
             this.Controls.Add(this.addbutton);
@@ -152,6 +175,7 @@ namespace densing_client_crud
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -167,6 +191,8 @@ namespace densing_client_crud
         private System.Windows.Forms.Button addbutton;
         private System.Windows.Forms.Button updatebutton;
         private System.Windows.Forms.Button deletebutton;
+        private System.Windows.Forms.TextBox searchbar;
+        private System.Windows.Forms.Button button1;
     }
 }
 

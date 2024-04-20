@@ -53,6 +53,11 @@ namespace densing_client_crud
 
             getSelectedId = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            operation.searchClient(searchbar.Text.Trim());
+        }
     }
 }
 

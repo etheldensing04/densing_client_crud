@@ -36,11 +36,26 @@ namespace densing_client_crud.Entities
         public DateTime dateValue { get; set; }
         private void addbutton_Click(object sender, EventArgs e)
         {
-            GetAddText[0] = fname_val.Text.Trim();
-            GetAddText[1] = lname_val.Text.Trim();
-            GetAddText[2] = rname_val.Text.Trim();
-            dateValue = date_val.Value;
-            this.Close();
+            string fname = fname_val.Text.Trim();
+            string lname = lname_val.Text.Trim();
+            string residency = rname_val.Text.Trim();
+            DateTime date = date_val.Value;
+
+            if (!string.IsNullOrWhiteSpace(fname) &&
+                !string.IsNullOrWhiteSpace(lname) &&
+                !string.IsNullOrWhiteSpace(residency))
+            {
+                GetAddText[0] = fname;
+                GetAddText[1] = lname;
+                GetAddText[2] = residency;
+                dateValue = date;
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please fill out all fields with valid values.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
